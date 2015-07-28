@@ -17,15 +17,16 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet"  href="node_modules/bootstrap/dist/js/bootstrap.min.js">
     <link rel="stylesheet" href="form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 </head>
 <body>
 
-<div class="container">
-<div class="row">
-    <div class="col-xs-12 col-md-8">
-        <div class="center-block placeholder">
+<div class="container-fluid">
+<div class="center-block clearfix">
+    <div class="">
+        <!--<div class="offset">-->
             <!--&lt;!&ndash;<form class="form-horizontal">-->
                 <!--<div class="form-group">-->
                     <!--<label for="inputEmail3" class="col-sm-2 control-label">Email</label>-->
@@ -61,45 +62,91 @@
             <form class="form-horizontal" action='' method="POST">
                 <fieldset>
                     <div id="legend">
-                        <legend class="">Register</legend>
+                        <legend class="legenda">Register</legend>
                     </div>
-                    <div class="control-group">
+
+                    <div class="control-group form-group">
+                        <!-- First name-->
+                        <div class="controls">
+                        <label for="exampleInputName2">First name</label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane">
+                            <p class="help-block">First name can contain just letters with  spaces</p>
+                        </div>
+                    </div>
+
+
+                    <div class="control-group form-group">
+                        <!-- Last name-->
+                        <div class="controls">
+                            <label for="exampleInputName2">Last name</label>
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder=" Doe">
+                            <p class="help-block">Last name can contain just letters with  spaces</p>
+                        </div>
+                    </div>
+
+
+                    <div class="control-group form-group">
                         <!-- Username -->
                         <label class="control-label"  for="username">Username</label>
                         <div class="controls">
-                            <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                            <input type="text" id="username" name="username" placeholder="Username123" class="input-xlarge form-control">
                             <p class="help-block">Username can contain any letters or numbers, without spaces</p>
                         </div>
                     </div>
 
-                    <div class="control-group">
+                    <div class="control-group form-group">
+                        <!--Sex-->
+                        <label class="control-label"  for="genderInput">Gender</label>
+                        <select class="form-control">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+
+
+                    <div class="control-group form-group">
+                        <!--Date of birth-->
+                            <label class="control-label" for="birthday" class="control-label input-md">Birthday</label>
+                            <div class="col-xs-3 col-lg-1">
+                                <input type="text" class="form-control" placeholder="year"/>
+                            </div>
+                            <div class="col-xs-3 col-lg-1">
+                                <input type="text" class="form-control" placeholder="month"/>
+                            </div>
+                            <div class="col-xs-3 col-lg-1">
+                                <input type="text" class="form-control" placeholder="day"/>
+                            </div>
+
+                        </div>
+
+                    <div class="control-group form-group">
                         <!-- E-mail -->
                         <label class="control-label" for="email">E-mail</label>
                         <div class="controls">
-                            <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+                            <input type="text" id="email" name="email" placeholder="e.g. mail@someone.com" class="input-xlarge form-control">
                             <p class="help-block">Please provide your E-mail</p>
                         </div>
                     </div>
 
-                    <div class="control-group">
+                    <div class="control-group form-group">
                         <!-- Password-->
                         <label class="control-label" for="password">Password</label>
                         <div class="controls">
-                            <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                            <input type="password" id="password" name="password" placeholder="" class="input-xlarge form-control">
                             <p class="help-block">Password should be at least 4 characters</p>
                         </div>
                     </div>
 
-                    <div class="control-group">
+                    <div class="control-group form-group">
                         <!-- Password -->
                         <label class="control-label"  for="password_confirm">Password (Confirm)</label>
                         <div class="controls">
-                            <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+                            <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge form-control">
                             <p class="help-block">Please confirm password</p>
                         </div>
                     </div>
 
-                    <div class="control-group">
+                    <div class="control-group form-group">
                         <!-- Button -->
                         <div class="controls">
                             <button class="btn btn-success">Register</button>
@@ -108,7 +155,6 @@
                 </fieldset>
                 </form>
         </div>
-    </div>
 </div>
 
 </div>
